@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --color-dark-cyan: hsl(158, 36%, 37%);
+  --color-darker-cyan: hsl(158, 36%, 12%);
+  --color-cream: hsl(30, 38%, 92%);
+  --color-very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-fraunces: 'fraunces', serif;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1;
+  background-color: var(--color-cream);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+image {
+  display: block;
+  width: 100%;
+}
+
+.product-card {
+  background-color: var(--white);
+  border-radius: 1rem;
+  margin: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: var(--Dark-grayish-blue);
+}
+.img-wrapper {
+  background-image: url(./images/image-product-mobile.jpg);
+  min-height: 24rem;
+  background-position: center;
+  background-size: cover;
+}
+.content-wrapper {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.product-category {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+}
+.headline-text {
+  font-family: var(--font-fraunces);
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+}
+.product-title {
+  color: var(--color-very-dark-blue);
+}
+.product-description {
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  font-weight: 500;
+}
+.price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.discounted-price {
+  color: var(--color-dark-cyan);
+}
+.original-price {
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+  text-decoration: line-through;
+}
+.btn {
+  font-size: 1.4rem;
+  color: var(--white);
+  background-color: var(--color-dark-cyan);
+  border: none;
+  padding: 1.7rem;
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.5s;
+}
+.btn:hover {
+  background-color: var(--color-darker-cyan);
+  cursor: pointer;
+}
+@media screen and (min-width: 632px) {
+  .product-card {
+    flex-direction: row;
+    height: 45rem;
+    max-width: 60rem;
+  }
+  .img-wrapper {
+    flex-basis: 300px;
+    background-image: url(./images/image-product-desktop.jpg);
+  }
+  .content-wrapper {
+    flex-basis: 300px;
+    padding: 3.2rem;
+    gap: 2.4rem;
+  }
+}
